@@ -64,10 +64,10 @@ There are a number of helper scripts exposed via our `package.json` (below list 
 
 ### Debugging synced lookup information:
 
-To debug synced lookup information in the database, you can bypass the action scheduler and immediately sync order and customer information by using the `woocommerce_skip_import_scheduling` hook.
+To debug synced lookup information in the database, you can bypass the action scheduler and immediately sync order and customer information by using the `woocommerce_admin_skip_action_scheduling` hook.
 
 ```php
-add_filter( 'woocommerce_skip_import_scheduling', '__return_true' );
+add_filter( 'woocommerce_admin_skip_action_scheduling', '__return_true' );
 ```
 
 ### Using `debug` package.
