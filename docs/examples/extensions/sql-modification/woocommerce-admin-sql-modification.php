@@ -31,3 +31,14 @@ function add_report_register_script() {
 	wp_enqueue_script( 'sql-modification' );
 }
 add_action( 'admin_enqueue_scripts', 'add_report_register_script' );
+
+function apply_currency_arg ( $args ) {
+
+	if( isset( $_REQUEST['currency'] ) ) {
+		$args['currency'] = $_REQUEST['currency'];
+	}
+
+	return $args;
+}
+
+add_filter( 'woocommerce_reports_revenue_query_args', 'apply_currency_arg' );

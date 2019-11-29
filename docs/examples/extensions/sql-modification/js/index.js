@@ -5,10 +5,6 @@
 import { addFilter } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
 
-/**
- * WooCommerce dependencies
- */
-
 const addCurrencyFilters = filters => {
 	return [
 		{
